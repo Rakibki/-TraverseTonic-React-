@@ -6,6 +6,8 @@ import MagicalCity from "./MagicalCity";
 import Blog from "./Blog";
 import Holiday from "./Holiday";
 import TravelEssentlals from "./TravelEssentlals";
+import Newspapaer from "./Newspapaer";
+import OutTeam from "./OutTeam";
 
 const Home = () => {
   return (
@@ -14,7 +16,9 @@ const Home = () => {
       <Package />
       <MagicalCity />
       <TravelEssentlals />
+      <Newspapaer />
       <Blog />
+      <OutTeam />
       <Holiday />
       <Reviews />
     </div>

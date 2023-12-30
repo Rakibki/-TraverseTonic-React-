@@ -1,11 +1,77 @@
+import logo from "../../assets/image/logo.png";
+import { NavLink } from "react-router-dom";
 
-const Navber = ({children}) => {
+const Navber = () => {
+  const navItems = (
+    <>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/"}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/aboutUs"}
+        >
+          About Us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/shop"}
+        >
+          Shop
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/tours"}
+        >
+          Tours
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/blog"}
+        >
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#3fd0d4]" : ""
+          }
+          to={"/contactUs"}
+        >
+          Contact Us
+        </NavLink>
+      </li>
+    </>
+  );
   return (
-    <div className="drawer z-50">
+    <div className="drawer py-2 z-50">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-base-300">
+        <div className="w-full navbar bg-white">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -27,21 +93,22 @@ const Navber = ({children}) => {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2 mx-2">Navbar Title</div>
-          <div className="flex-none hidden lg:block">
-            <ul className="menu menu-horizontal">
-              {/* Navbar menu content here */}
-              <li>
-                <a>Navbar Item 1</a>
-              </li>
-              <li>
-                <a>Navbar Item 2</a>
-              </li>
-            </ul>
+          <div className="flex-1 px-2 mx-2">
+            <img className="w-[170px]" src={logo} alt="" />
+
+            <div className="flex-none mx-auto hidden lg:block">
+              <ul className="flex gap-6 font-medium text-base menu-horizontal">
+                {/* Navbar menu content here */}
+                {navItems}
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]">
+              Login
+            </button>
           </div>
         </div>
-        {/* Page content here */}
-      {children}
       </div>
       <div className="drawer-side">
         <label
@@ -51,12 +118,7 @@ const Navber = ({children}) => {
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
-          <li>
-            <a>Sidebar Item 1222</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
+          {navItems}
         </ul>
       </div>
     </div>
