@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Package = () => {
   const { isPending, data } = useQuery({
@@ -14,7 +15,7 @@ const Package = () => {
   if (isPending) <Loader />;
 
   return (
-    <div className="z-0">
+    <div>
       <Swiper
         autoplay={{
           delay: 1000,
@@ -31,7 +32,11 @@ const Package = () => {
         {data?.map((item) => {
           return (
             <SwiperSlide key={item?._id}>
-              <img src={item?.image} alt="" />
+              <Link to={`/PackageDetails/${item?._id}`}>
+                <div>
+                  <img src={item?.image} alt="" />
+                </div>
+              </Link>
             </SwiperSlide>
           );
         })}
