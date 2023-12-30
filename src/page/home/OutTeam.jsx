@@ -11,7 +11,7 @@ import "./style.css";
 
 const OutTeam = () => {
   return (
-    <div className="px-20 overflow-x-hidden">
+    <div className="px-20 my-20 overflow-x-hidden">
       <Title
         subTitle={"The Best"}
         desc={
