@@ -40,7 +40,7 @@ const Reviews = () => {
                 delay: 1000,
                 disableOnInteraction: false,
               }}
-              slidesPerView={4}
+              slidesPerView={3}
               spaceBetween={15}
               pagination={{
                 clickable: true,
@@ -51,8 +51,11 @@ const Reviews = () => {
               {data?.map((item, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="bg-white" >
+                    <div className="bg-white p-8 grid grid-cols-3 rounded-xl" >
                         <img src={item?.image} alt="" />
+                        <div className="col-span-2">
+                          <h1 className="text-xl font-bold">{item?.name}</h1>
+                        </div>
                     </div>
                   </SwiperSlide>
                 );

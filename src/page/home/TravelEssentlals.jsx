@@ -2,30 +2,33 @@ import Title from "../../components/title/Title";
 import tips1 from "../../assets/image/tips1.jpg";
 import tips2 from "../../assets/image/tips2.jpg";
 import { GoArrowUpRight } from "react-icons/go";
+import { CiCalendar } from "react-icons/ci";
+import { CiEdit } from "react-icons/ci";
 
 const TravelEssentlals = () => {
   return (
-    <div>
-      <Title
-        desc={
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor lorem ipsum."
-        }
-        title={"TRAVEL ESSENTIALS TIPS"}
-        subTitle={"Lorem ipsum dolor"}
-      />
-
+    <div className="mt-20">
+      <Title title={"TRAVEL ESSENTIALS TIPS"} subTitle={"Lorem ipsum dolor"} />
       <div>
-        <div className="grid grid-cols-2">
+        <div className="grid gap-6 grid-cols-2">
           <div>
             <img src={tips1} alt="" />
           </div>
-          <div>
-            <h2>October 8, 2019</h2>
-            <h2>by Alisa Michaels</h2>
-            <h2 className="text-4xl font-bold">
+          <div className="p-10">
+            <div className="flex mb-3 gap-3 items-center">
+              <h2 className="flex items-center font-Satisfy text-[#505050] font-medium text-lg gap-2">
+                <CiCalendar className="text-xl" />
+                October 8, 2019
+              </h2>
+              <h2 className="flex items-center font-Satisfy text-[#505050] font-medium text-lg gap-2">
+                <CiEdit className="text-xl" />
+                by Alisa Michaels
+              </h2>
+            </div>
+            <h2 className="text-3xl mb-3 font-bold">
               MOVING TROUGH: THE EVERYDAY URBAN JUNGLE OF YOUR CITY
             </h2>
-            <p>
+            <p className="mb-4 font-Poppins text-[#505050]">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut
               enim. ad minim veniam...
@@ -36,14 +39,22 @@ const TravelEssentlals = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2">
-          <div>
-            <h2>October 8, 2019</h2>
-            <h2>by Alisa Michaels</h2>
-            <h2 className="text-4xl font-bold">
+        <div className="grid gap-6 grid-cols-2">
+          <div className="p-10">
+            <div className="flex mb-3 gap-3 items-center">
+              <h2 className="flex items-center font-Satisfy text-[#505050] font-medium text-lg gap-2">
+                <CiCalendar className="text-xl" />
+                October 8, 2019
+              </h2>
+              <h2 className="flex items-center font-Satisfy text-[#505050] font-medium text-lg gap-2">
+                <CiEdit className="text-xl" />
+                by Alisa Michaels
+              </h2>
+            </div>
+            <h2 className="text-3xl mb-3 font-bold">
               MOVING TROUGH: THE EVERYDAY URBAN JUNGLE OF YOUR CITY
             </h2>
-            <p>
+            <p className="mb-4 font-Poppins text-[#505050]">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut
               enim. ad minim veniam...

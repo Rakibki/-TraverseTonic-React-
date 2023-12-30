@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      "Satisfy" : ['Satisfy', "cursive"],
+      "Poppins": ['Poppins', "sans-serif"]
+    }
   },
   plugins: [require("daisyui")],
 }
