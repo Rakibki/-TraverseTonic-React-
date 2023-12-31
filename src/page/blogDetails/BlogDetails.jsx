@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
+import Cover from "../../components/cover/Cover";
+import blogDatilsImg from "../../assets/image/blogDatils.jpg"
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -18,7 +20,13 @@ const BlogDetails = () => {
 
   if(isPending) <Loader />
 
-  return <div>BlogDetails</div>;
+  return <div>
+    <Cover image={blogDatilsImg} title={data?.title} />
+
+    <div className="my-20">
+
+    </div>
+  </div>;
 };
 
 export default BlogDetails;
