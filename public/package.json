@@ -11,7 +11,7 @@
     "ReturnTime": "Approximately 7.30PM",
     "DressCode": "Casual, comfortable and light",
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-14.jpg"
   },
   {
@@ -26,7 +26,7 @@
     "ReturnTime": "Approximately 7.30PM",
     "DressCode": "Casual, comfortable and light",
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-15.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "DressCode": "Casual, comfortable and light",
     "price": 1350,
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-16.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "DressCode": "Casual, comfortable and light",
     "price": 1350,
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-17.jpg"
   },
   {
@@ -71,7 +71,7 @@
     "DressCode": "Casual, comfortable and light",
     "price": 900,
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-18.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "DressCode": "Casual, comfortable and light",
     "price": 1600,
     "Included": ["5 Star Accommodation", " Airport Transfer", "Breakfast", "Personal Guide"],
-    "Not Included": ["Gallery Ticket", "Lunch"],
+    "NotIncluded": ["Gallery Ticket", "Lunch"],
     "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/10/tour-featured-img-19.jpg"
   }
 ]
