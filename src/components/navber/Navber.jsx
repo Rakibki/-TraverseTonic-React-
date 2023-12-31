@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import logo from "../../assets/image/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { authContext } from "../../providers/AuthProvaider";
 
 const Navber = () => {
+  const { user, logOut } = useContext(authContext);
+
+  const handleLogout = () => {
+    logOut()
+  }
+
   const navItems = (
     <>
       <li>
@@ -104,9 +112,20 @@ const Navber = () => {
             </div>
           </div>
           <div>
-            <button className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]">
-              Login
-            </button>
+            {user && user?.email ? (
+              <button
+                onClick={handleLogout}
+                className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link to={"/login"}>
+                <button className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]">
+                  Login
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

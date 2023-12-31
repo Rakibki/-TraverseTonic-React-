@@ -38,7 +38,13 @@ const Package = () => {
             <SwiperSlide className="shadow-2xl my-10" key={item?._id}>
               <Link to={`/PackageDetails/${item?._id}`}>
                 <div>
-                  <img src={item?.image} alt="" />
+                  <div className="overflow-hidden">
+                    <img
+                      className="hover:scale-125 transition-all"
+                      src={item?.image}
+                      alt=""
+                    />
+                  </div>
                   <div className="bg-[#3fd0d4] text-white flex">
                     <div className="flex mx-auto items-center text-lg gap-1">
                       <div className="flex gap-1 mr-3 items-center">

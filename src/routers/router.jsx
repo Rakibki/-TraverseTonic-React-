@@ -11,6 +11,7 @@ import Tours from "../page/tours/Tours";
 import Shop from "../page/shop/Shop";
 import AboutUs from "../page/aboutUs/AboutUs";
 import ContactUs from "../page/contactUs/ContactUs";
+import BlogDetails from "../page/blogDetails/BlogDetails";
 
 
   const router = createBrowserRouter([
@@ -45,6 +46,10 @@ import ContactUs from "../page/contactUs/ContactUs";
         {
           path: "/contactUs",
           element: <ContactUs />
+        },
+        {
+          path: "/bolg-details/:id",
+          element: <BlogDetails />
         },
         {
           path: "/login",
