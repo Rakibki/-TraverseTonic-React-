@@ -1,6 +1,4 @@
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/mainLayout/MainLayout";
 import Home from "../page/home/Home";
 import Login from "../page/login/Login";
@@ -13,57 +11,65 @@ import AboutUs from "../page/aboutUs/AboutUs";
 import ContactUs from "../page/contactUs/ContactUs";
 import BlogDetails from "../page/blogDetails/BlogDetails";
 import Error from "../page/error/Error";
+import PrivateRoute from "./PrivateRoute";
+import ProductDetails from "../components/productDetails/ProductDetails";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/PackageDetails/:id",
+        element: (
+          <PrivateRoute>
+            <PackageDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/tours",
+        element: <Tours />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs />,
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs />,
+      },
+      {
+        path: "/bolg-details/:id",
+        element: <BlogDetails />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
+  },
+]);
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout />,
-      errorElement: <Error />,
-      children: [
-        {
-            path: "/",
-            element: <Home />
-        },
-        {
-          path: "/PackageDetails/:id",
-          element: <PackageDetails />
-        },
-        {
-          path: "/blog",
-          element: <Blog />
-        },
-        {
-          path: "/tours",
-          element: <Tours />
-        },
-        {
-          path: "/shop",
-          element: <Shop />
-        },
-        {
-          path: "/aboutUs",
-          element: <AboutUs />
-        },
-        {
-          path: "/contactUs",
-          element: <ContactUs />
-        },
-        {
-          path: "/bolg-details/:id",
-          element: <BlogDetails />
-        },
-        {
-          path: "/login",
-          element: <Login />
-        },
-        {
-          path: "/register",
-          element: <Register />
-        }
-      ]
-    },
-  ]);
-
-
-  export default router
+export default router;

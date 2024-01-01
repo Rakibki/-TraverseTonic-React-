@@ -7,8 +7,8 @@ const Navber = () => {
   const { user, logOut } = useContext(authContext);
 
   const handleLogout = () => {
-    logOut()
-  }
+    logOut();
+  };
 
   const navItems = (
     <>
@@ -102,7 +102,9 @@ const Navber = () => {
             </label>
           </div>
           <div className="flex-1 px-2 mx-2">
-            <img className="w-[170px]" src={logo} alt="" />
+            <Link to={"/"}>
+              <img className="w-[170px]" src={logo} alt="" />
+            </Link>
 
             <div className="flex-none mx-auto hidden lg:block">
               <ul className="flex gap-6 font-medium text-base menu-horizontal">

@@ -8,6 +8,7 @@ import Holiday from "./Holiday";
 import TravelEssentlals from "./TravelEssentlals";
 import Newspapaer from "./Newspapaer";
 import OutTeam from "./OutTeam";
+import Products from "./Products";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Newspapaer />
       <Blog />
       <OutTeam />
+      <Products />
       <Holiday />
       <Reviews />
     </div>

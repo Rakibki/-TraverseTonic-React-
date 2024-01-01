@@ -4,8 +4,12 @@ import Cover from "../../components/cover/Cover";
 import aboutVidero from "../../assets/image/aboutVidero.jpg";
 import playbutton from "../../assets/image/play-button.png";
 import aboutUsImg from "../../assets/image/about-us-img-2.png";
+import ProgressBar from "@ramonak/react-progress-bar";
+import ReviewSlider from "./ReviewSlider";
 
 const AboutUs = () => {
+
+
   return (
     <div>
       <Cover image={aboutImg} title={"About Us"} />
@@ -54,9 +58,45 @@ const AboutUs = () => {
             Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
             quam semper libero, sit amet adipiscing sem
           </p>
-          
+
+          <div className="mt-10">
+            <div>
+              <p className="font-Poppins font-medium">Countryside</p>
+              <ProgressBar
+                borderRadius="0"
+                baseBgColor="#f0ede8"
+                bgColor="#3fd0d4"
+                completed={76}
+              />
+            </div>
+
+            <div className="mt-6">
+              <p className="font-Poppins font-medium">Vineyard92</p>
+              <ProgressBar
+                borderRadius="0"
+                baseBgColor="#f0ede8"
+                bgColor="#3fd0d4"
+                completed={92}
+              />
+            </div>
+
+            <div className="mt-6">
+              <p className="font-medium font-Poppins">Wine Tasting</p>
+              <ProgressBar
+                borderRadius="0"
+                baseBgColor="#f0ede8"
+                bgColor="#3fd0d4"
+                completed={84}
+              />
+            </div>
+          </div>
         </div>
       </div>
+
+      
+      <div className="w-[90%] mx-auto mb-20 mt-16">
+          <ReviewSlider />
+        </div>
     </div>
   );
 };
