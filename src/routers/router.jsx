@@ -12,12 +12,14 @@ import Shop from "../page/shop/Shop";
 import AboutUs from "../page/aboutUs/AboutUs";
 import ContactUs from "../page/contactUs/ContactUs";
 import BlogDetails from "../page/blogDetails/BlogDetails";
+import Error from "../page/error/Error";
 
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout />,
+      errorElement: <Error />,
       children: [
         {
             path: "/",

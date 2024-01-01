@@ -12,12 +12,14 @@
     "desc": "Al elit omnes impedit ius, vel et hinc agam fabulas. Ut audiam invenire iracundia vim. En eam dico similique, ut sint posse sit, eum sumo diam ea. Liber consectetuer in mei, sea in imperdiet assueverit contentiones, an his cibo blandit tacimates. Iusto iudicabit similique id velex, in sea rebum deseruisse appellantur. Lorem ipsum Alienum phaedrum torquatos nec eu, vis detraxit pericu in mei, vix aperiri vix at,dolor sit amet. blandit dicant definition.Sit delicata persequeris ex, in sea rebum deseruisse appellantur. Lorem ipsum dolor sit amet.Eos ei nisl graecis, vix aperiri consequat an. Eius lorem.",
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "name": "Nancy Cruz",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
     "categories": ["Adventure", "Food", "New Year", "Summer", "Travel"],
     "comments": []
   },
+
   {
     "_id": "002",
     "mainImage": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/blog-img-2.jpg",
@@ -31,6 +33,7 @@
     "desc": "Al elit omnes impedit ius, vel et hinc agam fabulas. Ut audiam invenire iracundia vim. En eam dico similique, ut sint posse sit, eum sumo diam ea. Liber consectetuer in mei, sea in imperdiet assueverit contentiones, an his cibo blandit tacimates. Iusto iudicabit similique id velex, in sea rebum deseruisse appellantur. Lorem ipsum Alienum phaedrum torquatos nec eu, vis detraxit pericu in mei, vix aperiri vix at,dolor sit amet. blandit dicant definition.Sit delicata persequeris ex, in sea rebum deseruisse appellantur. Lorem ipsum dolor sit amet.Eos ei nisl graecis, vix aperiri consequat an. Eius lorem.",
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "name": "Nancy Cruz",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
@@ -51,6 +54,7 @@
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
       "name": "Nancy Cruz",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
     "categories": ["Adventure", "Food", "New Year", "Summer", "Travel"],
@@ -70,6 +74,7 @@
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
       "name": "Nancy Cruz",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
     "categories": ["Adventure", "Food", "New Year", "Summer", "Travel"],
@@ -89,6 +94,7 @@
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
       "name": "Nancy Cruz",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
     "categories": ["Adventure", "Food", "New Year", "Summer", "Travel"],
@@ -108,6 +114,7 @@
     "author": {
       "image": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/author-img.png",
       "name": "Nancy Cruz",
+      "image2": "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/destionations-sidebar-img.jpg",
       "message": "Lorem Ipsum dolor sit amet el et hinc agam fabulas. Ut audm invenire iracundia vim. An eam dico que"
     },
     "categories": ["Adventure", "Food", "New Year", "Summer", "Travel"],
