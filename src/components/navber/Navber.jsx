@@ -3,9 +3,12 @@ import logo from "../../assets/image/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../providers/AuthProvaider";
 import logo2 from "../../assets/image/logo-vertical.png";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { getLocalStor } from "../../utils/localStoreg";
 
 const Navber = () => {
   const { user, logOut } = useContext(authContext);
+  const lsCard = getLocalStor('card')
 
   const handleLogout = () => {
     logOut();
@@ -114,7 +117,12 @@ const Navber = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="flex items-center gap-6">
+            <div className="relative">
+              <MdOutlineShoppingCart className="text-3xl" />
+              <div className="absolute bg-[#3fd0d4] rounded-full px-1 text-white font-Poppins -right-1 -top-3">{lsCard.length}</div>
+            </div>
+
             {user && user?.email ? (
               <button
                 onClick={handleLogout}

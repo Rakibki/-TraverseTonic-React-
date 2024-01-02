@@ -3,8 +3,21 @@ import { BiShoppingBag } from "react-icons/bi";
 import "./style.css";
 import { Rate } from "antd";
 import { Link } from "react-router-dom";
+import { getLocalStor } from "../../utils/localStoreg";
 
 const SingleProduct = ({ product }) => {
+
+  const handleAddToCard = (id) => {
+    const lsCard = getLocalStor("card")
+    const isExsist = lsCard.find((item) => item === id)
+    if(isExsist) {
+      return alert("arlet add kora hoyeche")
+    }
+    lsCard.push(id);
+    const updateLsCard = JSON.stringify(lsCard)
+    localStorage.setItem('card', updateLsCard)
+  }
+
   return (
     <div className="mb-4">
       <div id="prodctImg" className="hover:relative overflow-hidden z-40">
@@ -17,6 +30,7 @@ const SingleProduct = ({ product }) => {
           <BiShoppingBag className="cursor-pointer" />
         </div>
         <button
+          onClick={() => handleAddToCard(product?._id)}
           id="btn"
           className="bg-[#3fd0d4] hidden z-50 absolute transition-all w-[90%] cursor-pointer font-Poppins font-medium mx-auto top-[230px] right-[10px] text-white py-2"
         >
