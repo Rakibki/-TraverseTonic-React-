@@ -16,7 +16,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 import { CiCalendarDate } from "react-icons/ci";
 import { FiMessageCircle } from "react-icons/fi";
-import sidebarImg from "../../assets/image/sidebar-img-1.jpg"
+import sidebarImg from "../../assets/image/sidebar-img-1.jpg";
+import { getLocalStor } from "../../utils/localStoreg";
+import Noticilation from "../../utils/Noticilation";
 
 const PackageDetails = () => {
   const { id } = useParams();
@@ -33,6 +35,23 @@ const PackageDetails = () => {
   });
 
   if (isPending) <Loader />;
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value
+    const email = e.target.email.value
+    const phone = e.target.phone.value
+    const message = e.target.message.value
+    const date = new Date(startDate).toDateString()
+    const tourData = {name, email, phone, message, date, packageId: id}
+
+    const lsTourList = getLocalStor('lsTourList');
+    lsTourList.push(tourData);
+    const lsTourListString = JSON.stringify(lsTourList)
+    localStorage.setItem("lsTourList", lsTourListString)
+    Noticilation("success", "tour book successfully")
+  }
 
   return (
     <div>
@@ -130,10 +149,11 @@ const PackageDetails = () => {
             Arrange your trip in advance - book this tour now!
           </h2>
 
-          <form className="mt-6">
+          <form onSubmit={handleSubmit} className="mt-6">
             <div className="relative overflow-hidden">
               <input
                 type="text"
+                name="name"
                 className="bg-[#6fdcdf] placeholder:text-white py-2 pl-10 w-full text-lg outline-none"
                 placeholder="Name"
               />
@@ -143,6 +163,7 @@ const PackageDetails = () => {
             <div className="relative mt-2 overflow-hidden">
               <input
                 type="email"
+                name="email"
                 className="bg-[#6fdcdf] placeholder:text-white py-2 pl-10 w-full text-lg outline-none"
                 placeholder="E-mail"
               />
@@ -151,6 +172,7 @@ const PackageDetails = () => {
 
             <div className="relative mt-2 text-white overflow-hidden">
               <input
+                name="phone"
                 type="number"
                 className="bg-[#6fdcdf] placeholder:text-white py-2 pl-10 w-full text-white text-lg outline-none"
                 placeholder="Phone"
@@ -172,12 +194,18 @@ const PackageDetails = () => {
                 type="text"
                 className="bg-[#6fdcdf] placeholder:text-white py-2 pl-10 w-full text-lg outline-none"
                 placeholder="Message"
+                name="message"
               />
               <FiMessageCircle className="absolute text-xl left-3 text-white top-[20%]" />
             </div>
 
             <div className="mt-3 mb-4">
-              <button className="py-3 hover:bg-[#6fdcdf] hover:text-white transition-all bg-white text-black font-Poppins font-semibold w-full">BOOK NOW</button>
+              <button
+                type="submit"
+                className="py-3 hover:bg-[#6fdcdf] hover:text-white transition-all bg-white text-black font-Poppins font-semibold w-full"
+              >
+                BOOK NOW
+              </button>
             </div>
           </form>
           <img src={sidebarImg} alt="" />

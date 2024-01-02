@@ -14,6 +14,7 @@ import Error from "../page/error/Error";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../components/productDetails/ProductDetails";
 import ViewCard from "../page/viewCard/ViewCard";
+import Profile from "../components/profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/viewcard",
         element: <ViewCard />,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <Profile />
       },
       {
         path: "/contactUs",

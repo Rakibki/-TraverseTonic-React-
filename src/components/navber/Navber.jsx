@@ -10,7 +10,7 @@ import ShoppingCard from "../shoppingCard/ShoppingCard";
 const Navber = () => {
   const { user, logOut } = useContext(authContext);
   const lsCard = getLocalStor("card");
-  const [cardOpen, setCardOpen] = useState(false)
+  const [cardOpen, setCardOpen] = useState(false);
 
   const handleLogout = () => {
     logOut();
@@ -121,25 +121,55 @@ const Navber = () => {
           </div>
           <div className="flex items-center gap-6">
             {/* possing Card */}
-            <div className="relative">
+            <div className="relative flex items-center">
               <div className="relative">
-                <MdOutlineShoppingCart onClick={() => setCardOpen(!cardOpen)} className="text-3xl cursor-pointer" />
+                <MdOutlineShoppingCart
+                  onClick={() => setCardOpen(!cardOpen)}
+                  className="text-3xl cursor-pointer"
+                />
                 <div className="absolute bg-[#3fd0d4] transition-all rounded-full px-1 text-white font-Poppins -right-1 -top-3">
                   {lsCard.length}
                 </div>
               </div>
-              <div className={`absolute  bottom-60 w-[300px] ${cardOpen && "top-[55px]"} h-[380px] -right-20 py-5 px-4 bg-white`}>
+              <div
+                className={`absolute bottom-60 w-[300px] ${
+                  cardOpen && "top-[55px]"
+                } h-[380px] -right-20 py-2 px-4 bg-white`}
+              >
                 <ShoppingCard setCardOpen={setCardOpen} />
               </div>
             </div>
 
             {user && user?.email ? (
-              <button
-                onClick={handleLogout}
-                className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]"
-              >
-                Logout
-              </button>
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  className="w-[45px] overflow-hidden h-[45px] m-1"
+                >
+                  <img
+                    className="rounded-full w-full h-full border-[2px] border-[#3fd0d4]"
+                    src={user?.photoURL}
+                    alt=""
+                  />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu pt-10 pb-6 px-6 shadow bg-base-100 w-52"
+                >
+                  <Link className="w-full" to={'/dashboard/profile'}>
+                    <button className="mb-1 w-full font-semibold px-6 hover:bg-opacity-55 transition-all text-[#3fd0d4] text-lg border-2 py-2 border-[#3fd0d4]">
+                      Profile
+                    </button>
+                  </Link>
+
+                  <button
+                    onClick={handleLogout}
+                    className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]"
+                  >
+                    Logout
+                  </button>
+                </ul>
+              </div>
             ) : (
               <Link to={"/login"}>
                 <button className="text-white font-semibold px-6 hover:bg-opacity-55 transition-all text-lg py-2 bg-[#3fd0d4]">

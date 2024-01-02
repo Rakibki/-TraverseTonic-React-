@@ -37,7 +37,7 @@ const ShoppingCard = ({ setCardOpen }) => {
       )}
       {cardProducts?.length > 0 && (
         <div>
-          <div className="absolute right-2 bottom-2">
+          <div className="absolute right-0 bottom-0">
             <button onClick={() => setCardOpen(false)}>Close</button>
           </div>
           {cardProducts.slice(0, 3).map((item) => {
