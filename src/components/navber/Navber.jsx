@@ -2,6 +2,7 @@ import { useContext } from "react";
 import logo from "../../assets/image/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../providers/AuthProvaider";
+import logo2 from "../../assets/image/logo-vertical.png";
 
 const Navber = () => {
   const { user, logOut } = useContext(authContext);
@@ -137,9 +138,10 @@ const Navber = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-base-200">
+        <ul className="p-10 text-lg font-medium w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
-          {navItems}
+          <img src={logo2} alt="" />
+          <div className="mt-4 flex  flex-col gap-2">{navItems}</div>
         </ul>
       </div>
     </div>

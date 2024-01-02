@@ -19,7 +19,7 @@ const Package = () => {
   if (isPending) <Loader />;
 
   return (
-    <div>
+    <div className="mb-20">
       <Swiper
         autoplay={{
           delay: 1000,
@@ -35,7 +35,7 @@ const Package = () => {
       >
         {data?.map((item) => {
           return (
-            <SwiperSlide className="shadow-2xl my-10" key={item?._id}>
+            <SwiperSlide className="shadow-xl my-10" key={item?._id}>
               <Link to={`/PackageDetails/${item?._id}`}>
                 <div>
                   <div className="overflow-hidden">

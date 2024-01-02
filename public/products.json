@@ -25,7 +25,7 @@
     "name": "Camera",
     "price": "760",
     "ratting": 5,
-    "Category": "Accessories",
+    "Category": "Beach",
     "Tags": ["Clothes", "Modern", "Vintage"],
     "desc": "Consectetur adipiscing elit. In leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis montes nascetur ridiculus."
   },
@@ -40,7 +40,7 @@
     "name": "Backpack",
     "price": "360",
     "ratting": 5,
-    "Category": "Accessories",
+    "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Fashion"],
     "desc": "Consectetur adipiscing elit. In leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis montes nascetur ridiculus."
   },
@@ -205,7 +205,7 @@
     "name": "Bag",
     "price": "150",
     "ratting": 2,
-    "Category": "Accessories",
+    "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Fashion"],
     "desc": "Consectetur adipiscing elit. In leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis montes nascetur ridiculus."
   },

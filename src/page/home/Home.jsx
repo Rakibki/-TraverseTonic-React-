@@ -15,12 +15,12 @@ const Home = () => {
     <div>
       <Banner />
       <Package />
+      <Products />
       <MagicalCity />
       <TravelEssentlals />
       <Newspapaer />
       <Blog />
       <OutTeam />
-      <Products />
       <Holiday />
       <Reviews />
     </div>
