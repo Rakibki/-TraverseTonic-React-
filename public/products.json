@@ -8,7 +8,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-4-300x300.jpg"
     ],
     "name": "Skis",
-    "price": "760",
+    "price": 760,
     "ratting": 5,
     "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Vintage"],
@@ -23,7 +23,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-9-300x300.jpg"
     ],
     "name": "Camera",
-    "price": "760",
+    "price": 760,
     "ratting": 5,
     "Category": "Beach",
     "Tags": ["Clothes", "Modern", "Vintage"],
@@ -38,7 +38,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-10-300x300.jpg"
     ],
     "name": "Backpack",
-    "price": "360",
+    "price": 360,
     "ratting": 5,
     "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -53,7 +53,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-13-300x300.jpg"
     ],
     "name": "Towel",
-    "price": "160",
+    "price": 160,
     "ratting": 3,
     "Category": "Beach",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -68,7 +68,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-16-300x300.jpg"
     ],
     "name": "Compass",
-    "price": "160",
+    "price": 160,
     "ratting": 3,
     "Category": "Camping",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -83,7 +83,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-21-300x300.jpg"
     ],
     "name": "Thermos",
-    "price": "130",
+    "price": 130,
     "ratting": 3,
     "Category": "Camping",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -98,7 +98,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-22-300x300.jpg"
     ],
     "name": "Sunglasses",
-    "price": "130",
+    "price": 130,
     "ratting": 4.5,
     "Category": "Vintage",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -113,7 +113,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-27-300x300.jpg"
     ],
     "name": "Summer Hat",
-    "price": "130",
+    "price": 130,
     "ratting": 4.5,
     "Category": "Beach",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -128,7 +128,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-30-300x300.jpg"
     ],
     "name": "Star",
-    "price": "100",
+    "price": 100,
     "ratting": 4.5,
     "Category": "Summer",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -143,7 +143,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-33-300x300.jpg"
     ],
     "name": "Flip-flops",
-    "price": "90",
+    "price": 90,
     "ratting": 4.5,
     "Category": "Summer",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -158,7 +158,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-36-300x300.jpg"
     ],
     "name": "Rope",
-    "price": "50",
+    "price": 50,
     "ratting": 3.5,
     "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -173,7 +173,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-37-300x300.jpg"
     ],
     "name": "Lamp",
-    "price": "50",
+    "price": 50,
     "ratting": 3.5,
     "Category": "Camping",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -188,7 +188,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-40-300x300.jpg"
     ],
     "name": "Skateboard",
-    "price": "150",
+    "price": 150,
     "ratting": 2,
     "Category": "Vintage",
     "Tags": ["Clothes", "Modern", "Fashion"],
@@ -203,14 +203,14 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-43-300x300.jpg"
     ],
     "name": "Bag",
-    "price": "150",
+    "price": 150,
     "ratting": 2,
     "Category": "Winter",
     "Tags": ["Clothes", "Modern", "Fashion"],
     "desc": "Consectetur adipiscing elit. In leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis montes nascetur ridiculus."
   },
   {
-    "_id": "448544",
+    "_id": "454354",
     "images": [
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-img-1-600x525.jpg",
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-3-300x300.jpg",
@@ -218,7 +218,7 @@
       "https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/shop-1-gallery-1-300x300.jpg"
     ],
     "name": "Modern Hat",
-    "price": "150",
+    "price": 150,
     "ratting": 2,
     "Category": "Vintage",
     "Tags": ["Clothes", "Modern", "Fashion"],

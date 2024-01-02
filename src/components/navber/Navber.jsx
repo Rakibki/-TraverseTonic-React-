@@ -1,14 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/image/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../providers/AuthProvaider";
 import logo2 from "../../assets/image/logo-vertical.png";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { getLocalStor } from "../../utils/localStoreg";
+import ShoppingCard from "../shoppingCard/ShoppingCard";
 
 const Navber = () => {
   const { user, logOut } = useContext(authContext);
-  const lsCard = getLocalStor('card')
+  const lsCard = getLocalStor("card");
+  const [cardOpen, setCardOpen] = useState(false)
 
   const handleLogout = () => {
     logOut();
@@ -118,9 +120,17 @@ const Navber = () => {
             </div>
           </div>
           <div className="flex items-center gap-6">
+            {/* possing Card */}
             <div className="relative">
-              <MdOutlineShoppingCart className="text-3xl" />
-              <div className="absolute bg-[#3fd0d4] rounded-full px-1 text-white font-Poppins -right-1 -top-3">{lsCard.length}</div>
+              <div className="relative">
+                <MdOutlineShoppingCart onClick={() => setCardOpen(!cardOpen)} className="text-3xl cursor-pointer" />
+                <div className="absolute bg-[#3fd0d4] transition-all rounded-full px-1 text-white font-Poppins -right-1 -top-3">
+                  {lsCard.length}
+                </div>
+              </div>
+              <div className={`absolute bottom-60 w-[300px] ${cardOpen && "top-[55px]"} h-[380px] -right-20 py-5 px-4 bg-white`}>
+                <ShoppingCard />
+              </div>
             </div>
 
             {user && user?.email ? (

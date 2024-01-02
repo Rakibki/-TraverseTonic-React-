@@ -7,6 +7,8 @@ import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Loader from "../loader/Loader";
 import { getLocalStor } from "../../utils/localStoreg";
+import { toast } from "react-toastify";
+import Noticilation from "../../utils/Noticilation";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -38,11 +40,12 @@ const ProductDetails = () => {
     const lsCard = getLocalStor("card");
     const isExsist = lsCard.find((item) => item === id);
     if (isExsist) {
-      return alert("arlet add kora hoyeche");
+      return Noticilation("warn", "already added card");
     }
     lsCard.push(id);
     const updateLsCard = JSON.stringify(lsCard);
     localStorage.setItem("card", updateLsCard);
+    Noticilation("success", "successfully added card!");
   };
 
   return (

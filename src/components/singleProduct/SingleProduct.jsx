@@ -4,19 +4,21 @@ import "./style.css";
 import { Rate } from "antd";
 import { Link } from "react-router-dom";
 import { getLocalStor } from "../../utils/localStoreg";
+import { toast } from "react-toastify";
+import Noticilation from "../../utils/Noticilation";
 
 const SingleProduct = ({ product }) => {
-
   const handleAddToCard = (id) => {
-    const lsCard = getLocalStor("card")
-    const isExsist = lsCard.find((item) => item === id)
-    if(isExsist) {
-      return alert("arlet add kora hoyeche")
+    const lsCard = getLocalStor("card");
+    const isExsist = lsCard.find((item) => item === id);
+    if (isExsist) {
+      return Noticilation("warn", "already added card");
     }
     lsCard.push(id);
-    const updateLsCard = JSON.stringify(lsCard)
-    localStorage.setItem('card', updateLsCard)
-  }
+    const updateLsCard = JSON.stringify(lsCard);
+    localStorage.setItem("card", updateLsCard);
+    Noticilation("success", "successfully added card!");
+  };
 
   return (
     <div className="mb-4">
