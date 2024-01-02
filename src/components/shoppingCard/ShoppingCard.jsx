@@ -3,32 +3,43 @@ import { getLocalStor } from "../../utils/localStoreg";
 import Loader from "../loader/Loader";
 import { Rate } from "antd";
 import { IoCloseOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import Noticilation from "../../utils/Noticilation";
 
-const ShoppingCard = () => {
+const ShoppingCard = ({ setCardOpen }) => {
   const lsCard = getLocalStor("card");
 
-  const { isPending, data } = useQuery({
+  const { isPending, data, refetch } = useQuery({
     queryKey: ["productCard"],
     queryFn: () => fetch("products.json").then((res) => res.json()),
   });
 
-  if (isPending) <Loader />;
+  if (isPending) {
+    return <Loader />;
+  }
 
   const cardProducts = data?.filter((item) => lsCard.includes(item?._id));
 
   const handleDelete = (id) => {
-    alert(id);
+    const find = lsCard.findIndex((item) => item === id);
+    lsCard.splice(find, 1);
+    localStorage.setItem("card", JSON.stringify(lsCard));
+    Noticilation("success", "product deleted succesfully");
+    refetch();
   };
 
-  const totalPrice = cardProducts?.reduce((acc, curr) => acc + curr?.price ,0)
+  const totalPrice = cardProducts?.reduce((acc, curr) => acc + curr?.price, 0);
 
   return (
-    <div>
+    <div className="relative h-full">
       {cardProducts?.length < 1 && (
         <p className="text-center font-Poppins">No Products in the card</p>
       )}
       {cardProducts?.length > 0 && (
         <div>
+          <div className="absolute right-2 bottom-2">
+            <button onClick={() => setCardOpen(false)}>Close</button>
+          </div>
           {cardProducts.slice(0, 3).map((item) => {
             return (
               <div
@@ -62,9 +73,11 @@ const ShoppingCard = () => {
           </div>
 
           <div className="flex mt-4 gap-2">
-            <button className="py-2 hover:opacity-80 transition-all uppercase bg-[#3fd0d4] px-4 text-white font-Poppins font-semibold">
-              VIEW CARD
-            </button>
+            <Link onClick={() => setCardOpen(false)} to={"dashboard/viewcard"}>
+              <button className="py-2 hover:opacity-80 transition-all uppercase bg-[#3fd0d4] px-4 text-white font-Poppins font-semibold">
+                VIEW CARD
+              </button>
+            </Link>
             <button className="py-2 hover:opacity-80 transition-all uppercase bg-[#3fd0d4] px-4 text-white font-Poppins font-semibold">
               CHECK OUT
             </button>

@@ -13,6 +13,7 @@ import BlogDetails from "../page/blogDetails/BlogDetails";
 import Error from "../page/error/Error";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../components/productDetails/ProductDetails";
+import ViewCard from "../page/viewCard/ViewCard";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/aboutUs",
         element: <AboutUs />,
+      },
+      {
+        path: "/dashboard/viewcard",
+        element: <ViewCard />,
       },
       {
         path: "/contactUs",

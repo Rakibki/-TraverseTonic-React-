@@ -128,8 +128,8 @@ const Navber = () => {
                   {lsCard.length}
                 </div>
               </div>
-              <div className={`absolute bottom-60 w-[300px] ${cardOpen && "top-[55px]"} h-[380px] -right-20 py-5 px-4 bg-white`}>
-                <ShoppingCard />
+              <div className={`absolute  bottom-60 w-[300px] ${cardOpen && "top-[55px]"} h-[380px] -right-20 py-5 px-4 bg-white`}>
+                <ShoppingCard setCardOpen={setCardOpen} />
               </div>
             </div>
 
