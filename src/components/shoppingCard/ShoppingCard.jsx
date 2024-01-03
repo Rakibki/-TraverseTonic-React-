@@ -11,7 +11,7 @@ const ShoppingCard = ({ setCardOpen }) => {
 
   const { isPending, data, refetch } = useQuery({
     queryKey: ["productCard"],
-    queryFn: () => fetch("products.json").then((res) => res.json()),
+    queryFn: () => fetch("/products.json").then((res) => res.json()),
   });
 
   if (isPending) {

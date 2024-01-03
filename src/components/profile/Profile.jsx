@@ -1,8 +1,12 @@
 import { useContext, useState } from "react";
 import { authContext } from "../../providers/AuthProvaider";
 import profileBg from "../../assets/image/profile.jpg";
-import { FaFacebookF } from "react-icons/fa";
-import { IoCloseOutline, IoLogoInstagram } from "react-icons/io5";
+import { FaFacebookF, FaRegCalendar, FaRegUser, FaStar } from "react-icons/fa";
+import {
+  IoCloseOutline,
+  IoLocationOutline,
+  IoLogoInstagram,
+} from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
 import { IoLogoTwitter } from "react-icons/io5";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -10,12 +14,16 @@ import { useQuery } from "@tanstack/react-query";
 import { getLocalStor } from "../../utils/localStoreg";
 import Loader from "../loader/Loader";
 import { Rate } from "antd";
+import { SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const { user } = useContext(authContext);
   const [tabIndex, setTabIndex] = useState(0);
   const lsCard = getLocalStor("card");
   const lsTourList = getLocalStor("lsTourList");
+
+  console.log(lsTourList);
 
   const { isPending, data } = useQuery({
     queryKey: ["productCard"],
@@ -136,54 +144,51 @@ const Profile = () => {
               </TabPanel>
 
               <TabPanel>
-                <div>
-                  {lsTourList.map((item) => {
+                <div className="grid grid-cols-2 gap-3">
+                  {lsTourList.map((tour) => {
                     return (
-                      <SwiperSlide className="shadow-xl" key={item?._id}>
-                        <Link to={`/PackageDetails/${item?._id}`}>
-                          <div>
-                            <div className="overflow-hidden">
-                              <img
-                                className="hover:scale-125 transition-all"
-                                src={item?.image}
-                                alt=""
-                              />
-                            </div>
-                            <div className="bg-[#3fd0d4] text-white flex">
-                              <div className="flex mx-auto items-center text-lg gap-1">
-                                <div className="flex gap-1 mr-3 items-center">
-                                  <FaRegCalendar className="text-base" />{" "}
-                                  <h1>1</h1>
-                                </div>
-                                <div className="flex gap-1 mr-3 items-center">
-                                  <FaRegUser className="text-base" />{" "}
-                                  <h1>11</h1>
-                                </div>
-                                <div className="flex gap-1 mr-3 items-center">
-                                  <IoLocationOutline className="text-base" />
-                                  <h1>Skling</h1>
-                                </div>
+                      <SwiperSlide className="shadow-xl" key={tour?._id}>
+                        <div>
+                          <div className="bg-[#3fd0d4] text-white flex">
+                            <div className="flex mx-auto items-center text-lg gap-1">
+                              <div className="flex gap-1 mr-3 items-center">
+                                <FaRegCalendar className="text-base" />{" "}
+                                <h1>1</h1>
                               </div>
-                            </div>
-                            <div className="p-6">
-                              <div>
-                                <h2 className="text-xl font-bold">
-                                  {item?.title}
-                                </h2>
-                                <p className="text-[#505050] mt-2 font-Poppins">
-                                  {item?.desc?.slice(0, 65)}...
-                                </p>
+                              <div className="flex gap-1 mr-3 items-center">
+                                <FaRegUser className="text-base" /> <h1>11</h1>
                               </div>
-                              <div className="flex mt-2 items-center gap-2">
-                                <div className="font-bold">${item?.price}</div>
-                                <div className="flex font-bold gap-1 items-center">
-                                  <FaStar />
-                                  {item?.ratting}Good
-                                </div>
+                              <div className="flex gap-1 mr-3 items-center">
+                                <IoLocationOutline className="text-base" />
+                                <h1>Skling</h1>
                               </div>
                             </div>
                           </div>
-                        </Link>
+                          <div className="p-4">
+                            <div className="flex gap-4 mb-2 font-Poppins">
+                              <h2 className="font-semibold">package Id :</h2>{" "}
+                              <h1 className="text-[#505050]">
+                                {tour?.packageId}
+                              </h1>
+                            </div>
+                            <div className="flex gap-4 mb-2 font-Poppins">
+                              <h2 className="font-semibold">Name :</h2>{" "}
+                              <h1 className="text-[#505050]">{tour?.name}</h1>
+                            </div>
+                            <div className="flex gap-4 mb-2 font-Poppins">
+                              <h2 className="font-semibold">Email :</h2>{" "}
+                              <h1 className="text-[#505050]">{tour?.email}</h1>
+                            </div>
+                            <div className="flex gap-4 mb-2 font-Poppins">
+                              <h2 className="font-semibold">Date :</h2>{" "}
+                              <h1 className="text-[#505050]">{tour?.date}</h1>
+                            </div>
+                            <div className="flex gap-4 mb-2 font-Poppins">
+                              <h2 className="font-semibold">Phone :</h2>{" "}
+                              <h1 className="text-[#505050]">{tour?.phone}</h1>
+                            </div>
+                          </div>
+                        </div>
                       </SwiperSlide>
                     );
                   })}
